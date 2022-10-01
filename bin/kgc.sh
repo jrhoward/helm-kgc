@@ -4,9 +4,7 @@ set -euo pipefail
 
 usage="Usage: helm $HELM_PLUGIN_NAME ConfigMapName"
 
-if [ "$#" -eq 1 ] ; then
-    continue
-else
+if [ "$#" -ne 1 ] ; then
     echo $usage
     exit 1
 fi
