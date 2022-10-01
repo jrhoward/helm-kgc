@@ -3,7 +3,7 @@ version: "1.25.1"
 usage: "helm kgc configmapName"
 description: "get a configmap key named values.yaml by configmap name"
 ignoreFlags: false
-command: "source  $HELM_PLUGIN_DIR/bin/kgc.sh"
+command: "$HELM_PLUGIN_DIR/bin/kubectl -n $HELM_NAMESPACE -o=jsonpath={.data.values\\.yaml} get cm"
 useTunnel: false
 hooks:
   install: "cd $HELM_PLUGIN_DIR; scripts/install.sh"
