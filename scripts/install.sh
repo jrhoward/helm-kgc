@@ -52,4 +52,4 @@ if [ -x "$(which curl 2>/dev/null)" ]; then
 else
     wget -q "${url}" -O "bin/kubectl"
 fi
-chmod 554 "bin/kubectl"
+chmod 555 "bin/kubectl"
