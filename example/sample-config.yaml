@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  # name must be the same as the ArgoCD app name and in the same namespace
+  name: nginx-cmp
+data:
+  values.yaml: |+
+      serviceAccount:
+        create: true
+        name: berty-nginx
