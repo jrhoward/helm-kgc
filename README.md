@@ -1,11 +1,10 @@
 # helm-kgc
 
-A helm plugin to retrieve values from a config map. Just wrapper for restricted kubctl commands.
+A helm plugin to retrieve values from a ConfigMap. Just wrapper for restricted kubctl commands.
 
-Only exists because I want to retrive helm values from a configmap to be used in an ArgoCD App.
+Only exists because I want to retrieve helm values from a configmap to be used in an ArgoCD App and building a binary seems overkill
 
-
-usage: `helm kgc ConfigmapName`
+Usage: `helm kgc ConfigmapName`
 
 ## Custom Tool Install
 
@@ -22,7 +21,7 @@ kubectl patch deployment argocd-repo-server -n  argocd --type json --patch-file 
 
 
 
-add ` --dry-run --output yaml` to validate patch beforehand
+Add ` --dry-run --output yaml` to validate patch beforehand
 
 **json-patch-deploy.yaml**
 
@@ -84,7 +83,7 @@ add ` --dry-run --output yaml` to validate patch beforehand
 
 ## Sample plugin usage
 
-add to argocd-cm ConfigMap.
+Add to argocd-cm ConfigMap.
 
 ```yaml
 
