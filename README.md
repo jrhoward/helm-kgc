@@ -14,9 +14,9 @@ eg:
 
 ```sh
 
-kubectl patch deployment  [REPO_SERVER_ROLE_NAME] -n  [NAMESPACE] --type json --patch-file json-patch-deploy.yaml
+kubectl patch role argocd-repo-server -n argocd --type=json --patch-file json-patch-sa.yaml
 
-kubectl patch role [REPO_SERVER_DEPLOYMENT_NAME] -n [NAMESPACE] --type=json --patch-file json-patch-sa.yaml
+kubectl patch deployment argocd-repo-server -n  argocd --type json --patch-file json-patch-deploy.yaml
 
 ```
 
