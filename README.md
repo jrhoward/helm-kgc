@@ -49,7 +49,7 @@ Add ` --dry-run --output yaml` to validate patch beforehand
     args:
     - |
       mkdir -p /custom-tools/helm-plugins
-      helm plugin install https://github.com/jrhoward/helm-kgc
+      helm plugin install https://github.com/jrhoward/helm-kgc || true
     command:
     - sh
     - -ec
